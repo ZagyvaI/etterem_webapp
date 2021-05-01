@@ -1,0 +1,20 @@
+<h1>Asztalok</h1>
+<table>
+  <tr>
+    <td *ngFor="let table of tables">
+      <ng-container *ngIf="table.reserve; then thenTemplate; else elseTemplate"></ng-container>
+      <ng-template #thenTemplate>
+        <button pButton type="button" class="reserved" label="{{table.id}}" routerLink="/{{table.id}}/foods" ></button>
+      </ng-template>
+
+      <ng-template #elseTemplate>
+          <button pButton type="button" class="free" label="{{table.id}}" routerLink="/{{table.id}}/foods" ></button>
+      </ng-template>        
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <button pButton type="button" class="Rendelésekre" label="Rendelések" routerLink="/orders" ></button>
+</table>

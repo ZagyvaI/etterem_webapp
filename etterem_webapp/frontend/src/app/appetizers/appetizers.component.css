@@ -1,0 +1,85 @@
+div {
+    width: auto;
+    overflow-y:auto;
+    /*border:solid violet;*/
+    max-height: 500px !important;
+    padding-bottom: 10px;
+}
+.foodstable {
+    /*border:solid green;*/
+    border-collapse: collapse;
+    background-color: #91bd3a;
+    opacity: 0.8;
+}
+.foodstable tr {
+    border-bottom: 3px solid #fe6845;
+    transition-duration: 0.5s;
+    
+}
+
+.foodstable tr:hover {
+    background-color: mintcream;
+}
+
+.foodstable td {/*foodorderstable(a nagy lista) td elemeire vonatkozik csak*/
+    /*border-bottom: 3px solid #fe6845;*/
+    padding: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:#fe6845;
+    font-size: 20px;
+}
+
+.orderstable {/*ez maga a táblázat a side-barban*/
+    border-collapse: collapse;
+    /*border: 3px solid black;*/
+}
+
+.orderstable td {/*orderstable(megrendelet) td elemeire vonatkozik csak*/
+    border-bottom: 2px solid #fe6845;
+    padding: 3px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    color:#fe6845;
+    font-size: 15px;
+}
+
+.button {
+    background-color: #fe6845;
+    border:2px solid white !important;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family:courier;
+    font-weight:bold;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.7s;
+}
+
+.button:hover {
+    background-color: white !important;
+    color:#fe6845 !important;
+    border: 2px solid #fe6845 !important;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.70),0 17px 50px 0 rgba(0,0,0,0.70);
+}
+
+:host ::ng-deep .ui-spinner .ui-spinner-up {
+    background-color: #fe6845;
+    border: 1px solid white;
+}
+:host ::ng-deep .ui-spinner .ui-spinner-up:hover {
+    background-color: white;
+    color: #fe6845;
+    border: 1px solid #fe6845;
+}
+:host ::ng-deep .ui-spinner .ui-spinner-down {
+    background-color: #fe6845;
+    border: 1px solid white;
+}
+:host ::ng-deep .ui-spinner .ui-spinner-down:hover {
+    background-color: white;
+    color: #fe6845;
+    border: 1px solid #fe6845;
+}

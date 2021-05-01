@@ -1,0 +1,18 @@
+<div class="center">
+    <h2>Registration</h2>
+    <div>
+      <p>
+        <input [(ngModel)]="user.username" placeholder="UserName"/>
+      </p>
+      <p>
+        <select [(ngModel)]="selectedValue">
+            <option *ngFor="let role of roles" [value]="role.id">{{role.name}}</option>
+          </select>
+      </p>
+      <p>
+        <input type="password" [(ngModel)]="user.password" placeholder="Password"/>
+      </p>
+    </div>
+    <button (click)="goBack()">Back</button>
+    <button (click)="save()">Save</button>
+  </div>

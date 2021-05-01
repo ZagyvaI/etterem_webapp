@@ -1,0 +1,12 @@
+<table>
+    <tr *ngFor="let food of foodsByTable">
+        <td>{{food.quantity}} db</td>
+        <td>{{food.name}}</td> 
+        <td>
+            <button pButton type="button" class="button" label="Kész" icon="pi pi-check" (click)="delete_Food_Orders(food); updateTable()"></button>
+        </td>
+        <td>
+            <button pButton type="button" class="button" label="Visszavon" icon="pi pi-times" (click)="cancel_Food_Order(food); updateTable()"></button>
+        </td>
+    </tr>
+</table>

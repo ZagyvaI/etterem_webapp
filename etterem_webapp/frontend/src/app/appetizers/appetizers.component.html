@@ -1,0 +1,34 @@
+<div>
+    <table class="foodstable">
+    <tr *ngFor="let food of foodbyCategory; let i = index">
+        <td>{{food.name}}</td> 
+        <td style="text-align: right">{{food.price}} Ft</td>
+        <td><p-spinner [(ngModel)]="val[i]" [min]="0"></p-spinner></td>
+    </tr>
+    </table>
+</div>
+
+<p-sidebar [(visible)]="display" position="right" [style]="{width:'500px'}">
+    <table class="orderstable">
+        <tr>
+            <th>Mennyiség</th>
+            <th>Étel</th>
+            <th>Egység ár</th>
+            <th>Össz. ár</th>
+        </tr>
+        <tr *ngFor="let food of toBeOrdered">
+            <td>{{food.quantity}} db</td>
+            <td>{{food.name}}</td>
+            <td style="text-align: right">{{food.price}} Ft</td>
+            <td style="text-align: right">{{food.price * food.quantity}} Ft</td>
+        </tr> 
+        <tr>
+            <td colspan="2" style="text-align: left">Végösszeg:</td>
+            <td colspan="2" style="text-align: right"> {{total}} Ft</td>
+        </tr>
+    </table>
+    <button pButton type="button" class="button" label="Megrendel" (click)="megrendel(); updateTable(); display = false"></button>
+</p-sidebar>
+<p>
+    <button type="text" class="button" (click)="display = true; rendeles()" pButton label="Rendelés"></button>
+</p>
